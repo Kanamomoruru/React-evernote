@@ -32,6 +32,7 @@ class App extends React.Component {
               selectedNote = {this.state.selectedNote}
               selectedNoteIndex={this.state.selectedNoteIndex}
               notes={this.state.notes}
+              noteUpdate={this.noteUpdate}
             ></EditorComponent> :
             null
         }
@@ -54,7 +55,10 @@ class App extends React.Component {
       });
   }
 
-  selectNote = (note, index) => this.setState({ selectedNoteIndex: index, selectedNote: note })
+  selectNote = (note, index) => this.setState({ selectedNoteIndex: index, selectedNote: note });
+  noteUpdate = (id, noteObj) => {
+    console.log(id, noteObj);
+  }
 }
 
 export default App;
