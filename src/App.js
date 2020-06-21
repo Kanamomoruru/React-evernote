@@ -24,7 +24,8 @@ class App extends React.Component {
           notes={this.state.notes}
           deleteNote={this.deleteNote}
           selectNote={this.selectNote}
-          newNote={this.newNote}></SidebarComponent>
+          newNote={this.newNote}>
+        </SidebarComponent>
         {
           this.state.selectedNote ?
           <EditorComponent selectedNote={this.state.selectedNote}
